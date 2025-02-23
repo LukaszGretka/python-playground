@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car parking reservation</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Car parking space reservation system</h1>
+      <form action="/reserve-space" method="post">
+        <div class="parking-form form-group">
+          <label for="licensePlate">Your name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="form-control"
+            required />
+        </div>
+        <div class="parking-form form-group">
+          <label for="licensePlate">License Plate:</label>
+          <input
+            type="text"
+            id="licensePlate"
+            name="licensePlate"
+            class="form-control"
+            required />
+        </div>
+        <div class="parking-form form-group">
+          <label for="startDate">Start Date:</label>
+          <input
+            type="date"
+            id="startDate"
+            name="startDate"
+            class="form-control"
+            required />
+        </div>
+        <div class="parking-form form-group">
+          <label for="endDate">End Date:</label>
+          <input
+            type="date"
+            id="endDate"
+            name="endDate"
+            class="form-control"
+            required />
+        </div>
+        <div class="parking-form form-group">
+          <label for="parkingSpace">Select Parking Space:</label>
+          <select
+            id="parkingSpace"
+            name="parkingSpace"
+            class="form-control"
+            required>
+            <option value="A1">A1</option>
+            <option value="A2">A2</option>
+            <option value="B1">B1</option>
+            <option value="B2">B2</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Confirm</button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATABASE_PATH = os.path.join(BASE_DIR, 'parking_reservation.db')
+
+DATABASE_CONFIG = {
+    'driver': 'sqlite',
+    'database': DATABASE_PATH
+}
